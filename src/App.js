@@ -32,13 +32,13 @@ function App() {
     setAlert({show, msg, type })
   };
   const clearList = () => {
-    showAlert(true,'empty list','danger');
+    showAlert(true,'list emptied','danger');
     setList([]);
   }
   const editItem = (id) => {
-    const specificItem = list.find((item) => item.id === id)
+    const specificItem = list.find((item) => item.id === id);
     setIsEditing(true);
-    setEditId(id)
+    setEditId(id);
     setName(specificItem.title);
   }
   const removeItem = (id) => {
